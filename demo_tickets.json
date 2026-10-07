@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Billing + refund",
+    "ticket": "I was charged twice for my Pro subscription this morning. I need the duplicate charge refunded because our finance team is closing the books today. Please help ASAP."
+  },
+  {
+    "name": "Technical bug",
+    "ticket": "My CSV export stopped working after today's update. I can still use the dashboard, but I need the export for a report tomorrow."
+  },
+  {
+    "name": "Account access",
+    "ticket": "I cannot access the workspace after my admin changed my email address. Please restore access."
+  }
+]

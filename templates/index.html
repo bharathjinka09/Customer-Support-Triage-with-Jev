@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jev Smart Support Triage</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <span class="eyebrow">TypeSafe AI + LangChain + FastAPI</span>
+        <h1>Jev Smart Support Triage</h1>
+        <p>Jev makes the decision. LangChain writes the response. Your code controls the action.</p>
+      </div>
+      <div class="badge">System One Demo</div>
+    </header>
+
+    <section class="card input-card">
+      <label for="ticket">Customer ticket</label>
+      <textarea id="ticket" rows="7">Hi, I was charged twice for my Pro subscription this morning. I need the duplicate charge refunded because our finance team is closing the books today. Please help ASAP.</textarea>
+      <div class="examples">
+        <button class="example" data-ticket="My CSV export stopped working after today's update. I can still use the dashboard, but I need the export for a report tomorrow.">Technical example</button>
+        <button class="example" data-ticket="I was charged twice for my Pro subscription this morning. I need the duplicate charge refunded because our finance team is closing the books today. Please help ASAP.">Billing example</button>
+        <button class="example" data-ticket="I cannot access the workspace after my admin changed my email address. Please restore access.">Account example</button>
+      </div>
+      <button id="analyzeBtn" class="primary">Analyze with Jev</button>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="card">
+        <div class="section-title"><span>1</span><h2>Jev decision layer</h2></div>
+        <div class="metrics">
+          <div class="metric"><small>Department</small><strong id="department">—</strong><em id="departmentConfidence">—</em></div>
+          <div class="metric"><small>Urgency</small><strong id="urgency">—</strong><em>0–3 rubric</em></div>
+          <div class="metric"><small>Refund probability</small><strong id="refund">—</strong><em>Noul</em></div>
+          <div class="metric"><small>Human review</small><strong id="humanProb">—</strong><em>Noul</em></div>
+        </div>
+      </div>
+
+      <div class="card route-card">
+        <div class="section-title"><span>2</span><h2>Deterministic automation</h2></div>
+        <h3 id="route">—</h3>
+        <p id="routeReason"></p>
+      </div>
+
+      <div class="card">
+        <div class="section-title"><span>3</span><h2>LangChain suggested reply</h2></div>
+        <p id="reply" class="reply"></p>
+      </div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
